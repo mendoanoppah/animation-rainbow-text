@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation Text Warna-warni</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+      :root {
+        --font-poppins: "Poppins";
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+      }
+
+      .wrapper {
+      }
+
+      .title {
+        font-family: var(--font-poppins);
+        font-weight: 500;
+
+        & span::after {
+          content: "Warna-warni";
+          font-weight: 300;
+          animation: animateWords 1s ease-in-out infinite;
+        }
+      }
+
+      @keyframes animateWords {
+        0%,
+        30% {
+          content: "Warna-warni";
+          /* color: rgb(35, 91, 35); */
+          background: linear-gradient(to right, red, yellow, blue);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+        31%,
+        60% {
+          content: "hahahha";
+          color: rgb(66, 66, 117);
+        }
+        61%,
+        100% {
+          content: "mntp";
+          background: linear-gradient(
+            to right,
+            rgb(13, 202, 86),
+            rgb(35, 30, 175),
+            rgb(190, 50, 61)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+    </style>
+    <div class="wrapper">
+      <!-- add content inside span with pesudo elements css -->
+      <h1 class="title">Animation Text <span></span></h1>
+    </div>
+  </body>
+</html>
