@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Animation Text Warna-warni</title>
   </head>
   <body>
@@ -36,11 +39,11 @@
         }
       }
 
+      /* for word animation*/
       @keyframes animateWords {
         0%,
         30% {
           content: "Warna-warni";
-          /* color: rgb(35, 91, 35); */
           background: linear-gradient(to right, red, yellow, blue);
           background-clip: text;
           -webkit-background-clip: text;
@@ -63,6 +66,13 @@
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
+        }
+      }
+
+      /* mobile responsive */
+      @media (max-width: 640px) {
+        .title {
+          font-size: 1.5rem;
         }
       }
     </style>
